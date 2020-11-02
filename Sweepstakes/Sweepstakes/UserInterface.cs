@@ -30,7 +30,7 @@ namespace Sweepstakes
             string emailAddress = Console.ReadLine();
             while (!emailAddress.Contains("@"))
             {
-                Console.WriteLine("What is your email address? ");
+                Console.WriteLine("Please enter a valid email address? ");
                 emailAddress = Console.ReadLine();
             }
 
@@ -42,7 +42,6 @@ namespace Sweepstakes
             Random randomNum = new Random();
             int registrationNumber = randomNum.Next(100, 1000);
           
-
             return registrationNumber;
         }
 

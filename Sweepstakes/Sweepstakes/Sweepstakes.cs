@@ -42,7 +42,7 @@ namespace Sweepstakes
             }
 
             Random randomNum = new Random();
-            int randomWinner = randomNum.Next(0, contestants.Count - 1);
+            int randomWinner = randomNum.Next(0, contestants.Count);
             
 
             return winnerPot[randomWinner];
@@ -50,7 +50,14 @@ namespace Sweepstakes
 
         public void PrintContestantInfo(Contestant contestant)
         {
-
+            Console.WriteLine("////////////////////////////////////");
+            Console.WriteLine();
+            Console.WriteLine($"First Name: {contestant.FirstName}");
+            Console.WriteLine($"Last Name: {contestant.LastName}");
+            Console.WriteLine($"Email Address: {contestant.EmailAddress}");
+            Console.WriteLine($"Registration Number: {contestant.RegistrationNumber}");
+            Console.WriteLine();
+            Console.WriteLine("/////////////////////////////////////");
         }
 
 

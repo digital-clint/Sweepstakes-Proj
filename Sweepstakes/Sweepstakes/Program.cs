@@ -13,12 +13,12 @@ namespace Sweepstakes
             Contestant contestant1 = new Contestant();
             Contestant contestant2 = new Contestant();
             Sweepstakes firstSweepstakes = new Sweepstakes("Monopoly");
+
             firstSweepstakes.RegisterContestant(contestant1);
             firstSweepstakes.RegisterContestant(contestant2);
-            Contestant theWinner = firstSweepstakes.PickWinner();
-            Console.WriteLine($"The winner of {firstSweepstakes.Name} is number {theWinner.RegistrationNumber} {theWinner.FirstName} {theWinner.LastName}");
-           
-            
+
+            firstSweepstakes.PrintContestantInfo(contestant1);
+            firstSweepstakes.PrintContestantInfo(contestant2);
 
             Console.ReadLine();
         }

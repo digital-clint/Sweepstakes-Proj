@@ -21,6 +21,7 @@ namespace Sweepstakes
             LastName = UserInterface.GetUserInputForLastName();
             EmailAddress = UserInterface.GetUserInputForEmailAddress();
             RegistrationNumber = UserInterface.GetUserInputForRegistrationNumber();
+            Console.Clear();
         }
 
 
