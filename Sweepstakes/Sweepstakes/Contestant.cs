@@ -13,4 +13,6 @@ namespace Sweepstakes
         public string EmailAddress { get; set; }
         public int RegistrationNumber { get; set; }
     }
+
+
 }
