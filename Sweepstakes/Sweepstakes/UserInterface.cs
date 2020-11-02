@@ -37,15 +37,16 @@ namespace Sweepstakes
             return emailAddress;
         }
 
-        public static string GetUserInputForRegistrationNumber(string firstName, string lastName)
+        public static int GetUserInputForRegistrationNumber()
         {
             Random randomNum = new Random();
             int registrationNumber = randomNum.Next(100, 1000);
-            string registrationNumString = Convert.ToString(registrationNumber);
-            registrationNumString = (firstName[0].ToString() + lastName[0].ToString()) + registrationNumString;
+          
 
-            return registrationNumString;
+            return registrationNumber;
         }
+
+      
 
 
     }
