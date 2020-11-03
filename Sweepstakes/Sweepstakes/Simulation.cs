@@ -8,10 +8,11 @@ namespace Sweepstakes
 {
     class Simulation
     {
+
+
         public void CreateMarketingFirmWithManager()
         {
-            
-
+            MarketingFirm marketingFirm= new MarketingFirm(GetUserInputForManagerType());
         }
 
         public ISweepstakesManager GetUserInputForManagerType()
