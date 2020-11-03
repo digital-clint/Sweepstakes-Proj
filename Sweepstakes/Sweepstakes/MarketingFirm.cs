@@ -10,15 +10,17 @@ namespace Sweepstakes
     {
         private ISweepstakesManager _manager;
 
+
         public MarketingFirm(ISweepstakesManager manager)
         {
             _manager = manager;
         }
 
-        public void CreateSweepstake()
+        public Sweepstakes CreateSweepstake()
         {
             string name = UserInterface.GetUserInputForSweepStakeName();
             Sweepstakes newSweepstake = new Sweepstakes(name);
+            return newSweepstake;
         }
 
        

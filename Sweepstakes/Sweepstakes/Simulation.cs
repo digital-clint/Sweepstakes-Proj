@@ -8,11 +8,38 @@ namespace Sweepstakes
 {
     class Simulation
     {
+        public MarketingFirm marketingFirm;
+        public Contestant contestant1;
+        public Contestant contestant2;
+        public Contestant contestant3;
+        public Sweepstakes sweepstakes;
 
+        public Simulation()
+        {
+            //Create Firm, manager and sweepstakes
+            CreateMarketingFirmWithManager();
+            sweepstakes = marketingFirm.CreateSweepstake();
+
+            //Create contestants, register them and print info
+            contestant1 = new Contestant();
+            contestant2 = new Contestant();
+            contestant3 = new Contestant();
+            sweepstakes.RegisterContestant(contestant1);
+            sweepstakes.RegisterContestant(contestant2);
+            sweepstakes.RegisterContestant(contestant3);
+            sweepstakes.PrintContestantInfo(contestant1);
+            sweepstakes.PrintContestantInfo(contestant2);
+            sweepstakes.PrintContestantInfo(contestant3);
+
+            //Pick random winner
+            sweepstakes.PickWinner();
+            
+
+        }
 
         public void CreateMarketingFirmWithManager()
         {
-            MarketingFirm marketingFirm= new MarketingFirm(GetUserInputForManagerType());
+            marketingFirm = new MarketingFirm(GetUserInputForManagerType());
         }
 
         public ISweepstakesManager GetUserInputForManagerType()
