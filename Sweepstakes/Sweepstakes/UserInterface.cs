@@ -53,13 +53,5 @@ namespace Sweepstakes
             return sweepstakeName;
         }
 
-
-
-
-
-
-
-
-
     }
 }
