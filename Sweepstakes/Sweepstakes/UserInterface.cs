@@ -79,7 +79,6 @@ namespace Sweepstakes
                 userResponseString = "n";
             }
 
-
             return userResponseString;
         }
 

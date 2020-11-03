@@ -11,9 +11,6 @@ namespace Sweepstakes
         static void Main(string[] args)
         {
             Simulation newSim = new Simulation();
-            
-
-
             Console.ReadLine();
         }
     }

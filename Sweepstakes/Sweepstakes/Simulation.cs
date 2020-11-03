@@ -14,7 +14,6 @@ namespace Sweepstakes
         public Contestant contestant3;
         public Sweepstakes sweepstakes;
         public Contestant winningContestant;
-        public ISweepstakesManager sweepstakesManager;
 
         public Simulation()
         {
@@ -25,9 +24,7 @@ namespace Sweepstakes
             while (UserInterface.GetUserInputToAddMoreSweepstakes() == "y")
             {
                 marketingFirm.CreateSweepstake();
-                
             }
-            
 
             //Pull sweepstake from stack or queue
             sweepstakes = marketingFirm.GetSweepstake();
@@ -44,13 +41,9 @@ namespace Sweepstakes
             sweepstakes.PrintContestantInfo(contestant3);
 
             //Pick random winner
-            
             winningContestant = sweepstakes.PickWinner();
             Console.WriteLine($"The winner of {sweepstakes.Name} is Registration number {winningContestant.RegistrationNumber}. {winningContestant.FirstName} {winningContestant.LastName}!!!");
             Console.WriteLine("Thanks to everyone who entered!");
-
-
-
         }
 
         public void CreateMarketingFirmWithManager()

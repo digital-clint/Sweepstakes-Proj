@@ -14,8 +14,6 @@ namespace Sweepstakes
         public MarketingFirm(ISweepstakesManager manager)
         {
             _manager = manager;
-
-            
         }
 
         public void CreateSweepstake()
@@ -23,7 +21,6 @@ namespace Sweepstakes
             string name = UserInterface.GetUserInputForSweepStakeName();
             Sweepstakes newSweepstake = new Sweepstakes(name);
             _manager.InsertSweepstakes(newSweepstake);
-    
         }
 
         public Sweepstakes GetSweepstake()

@@ -27,10 +27,7 @@ namespace Sweepstakes
 
         public void RegisterContestant(Contestant contestant)
         {
-
             contestants.Add(contestant.RegistrationNumber, contestant);
-
-
         }
 
         public Contestant PickWinner()
@@ -43,7 +40,6 @@ namespace Sweepstakes
 
             Random randomNum = new Random();
             int randomWinner = randomNum.Next(0, contestants.Count);
-            
 
             return winnerPot[randomWinner];
         }
