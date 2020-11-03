@@ -46,7 +46,7 @@ namespace Sweepstakes
             //Pick random winner
             
             winningContestant = sweepstakes.PickWinner();
-            Console.WriteLine($"The winner of {sweepstakes.Name} is Registarion number {winningContestant.RegistrationNumber}. {winningContestant.FirstName} {winningContestant.LastName}!!!");
+            Console.WriteLine($"The winner of {sweepstakes.Name} is Registration number {winningContestant.RegistrationNumber}. {winningContestant.FirstName} {winningContestant.LastName}!!!");
             Console.WriteLine("Thanks to everyone who entered!");
 
 

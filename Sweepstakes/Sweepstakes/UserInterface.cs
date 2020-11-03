@@ -10,6 +10,9 @@ namespace Sweepstakes
     {
         public static string GetUserInputForFirstName()
         {
+            Console.WriteLine($"//////////////////////////////////////////////////");
+            Console.WriteLine("*** NEW CONTESTANT FORM ***");
+            Console.WriteLine();
             Console.WriteLine("What is your first name? ");
             string firstName = Console.ReadLine();
 
@@ -47,6 +50,7 @@ namespace Sweepstakes
 
         public static string GetUserInputForSweepStakeName()
         {
+            Console.WriteLine($"----------------------------------------------------");
             Console.WriteLine("What is the name of your Sweepstake? ");
             string sweepstakeName = Console.ReadLine();
 
