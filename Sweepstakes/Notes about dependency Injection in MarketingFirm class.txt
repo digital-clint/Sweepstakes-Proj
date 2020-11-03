@@ -1,0 +1,8 @@
+MarketingFirm.cs dependency injection
+_____________________________________
+
+ -Dependency injection is being used in the MarketingFirm constructor because it allows any MarketingFirm object to create either a SweepstakesStackManager or SweepstakesQueueManager. 
+
+-This is possible because both manager's (stack and queue) inherit from the "ISweepstakesManager" interface.  
+
+-This injection is beneficial because now the application can utilize a single MarketingFirm class instead of having a MarketingFirmStack class and a MarketingFirmQueue class. Also, it allows for extension easily to a different type of manager. As long as the manager inherits from the "ISweepstakesManager" interface. 
