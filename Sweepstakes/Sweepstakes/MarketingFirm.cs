@@ -18,12 +18,12 @@ namespace Sweepstakes
             
         }
 
-        public Sweepstakes CreateSweepstake()
+        public void CreateSweepstake()
         {
             string name = UserInterface.GetUserInputForSweepStakeName();
             Sweepstakes newSweepstake = new Sweepstakes(name);
             _manager.InsertSweepstakes(newSweepstake);
-            return newSweepstake;
+    
         }
 
         public Sweepstakes GetSweepstake()

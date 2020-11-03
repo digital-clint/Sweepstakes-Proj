@@ -53,5 +53,31 @@ namespace Sweepstakes
             return sweepstakeName;
         }
 
+        public static string GetUserInputToAddMoreSweepstakes()
+        {
+            Console.WriteLine($"Would you like to add another sweepstake. Y or N? ");
+            string userAnswer = Console.ReadLine();
+
+            while (userAnswer.ToLower() != "y" && userAnswer.ToLower() != "yes" && userAnswer.ToLower() != "n" && userAnswer.ToLower() != "no")
+            {
+                Console.WriteLine($"Would you like to add another sweepstake? ");
+                Console.WriteLine("Please enter yes or no!");
+            }
+
+            string userResponseString;
+
+            if (userAnswer.ToLower() == "y" || userAnswer.ToLower() == "yes")
+            {
+                userResponseString = "y";
+            }
+            else
+            {
+                userResponseString = "n";
+            }
+
+
+            return userResponseString;
+        }
+
     }
 }

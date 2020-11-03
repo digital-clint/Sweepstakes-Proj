@@ -20,7 +20,14 @@ namespace Sweepstakes
         {
             //Create Firm, manager and add sweepstakes
             CreateMarketingFirmWithManager();
-            sweepstakes = marketingFirm.CreateSweepstake();
+            marketingFirm.CreateSweepstake();
+
+            while (UserInterface.GetUserInputToAddMoreSweepstakes() == "y")
+            {
+                marketingFirm.CreateSweepstake();
+                
+            }
+            
 
             //Pull sweepstake from stack or queue
             sweepstakes = marketingFirm.GetSweepstake();
