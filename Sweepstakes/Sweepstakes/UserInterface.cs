@@ -45,7 +45,15 @@ namespace Sweepstakes
             return registrationNumber;
         }
 
-   
+        public static string GetUserInputForSweepStakeName()
+        {
+            Console.WriteLine("What is the name of your Sweepstake? ");
+            string sweepstakeName = Console.ReadLine();
+
+            return sweepstakeName;
+        }
+
+
 
 
 

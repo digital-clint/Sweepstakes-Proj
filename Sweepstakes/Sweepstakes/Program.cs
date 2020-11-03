@@ -27,6 +27,7 @@ namespace Sweepstakes
             Sweepstakes contestThisTime = queue1.GetSweepstakes();
             Console.WriteLine($"The contest that was chosen this time was {contestThisTime.Name}!");
 
+
             Console.ReadLine();
         }
     }
