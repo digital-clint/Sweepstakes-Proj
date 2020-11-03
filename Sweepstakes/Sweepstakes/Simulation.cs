@@ -13,12 +13,17 @@ namespace Sweepstakes
         public Contestant contestant2;
         public Contestant contestant3;
         public Sweepstakes sweepstakes;
+        public Contestant winningContestant;
+        public ISweepstakesManager sweepstakesManager;
 
         public Simulation()
         {
-            //Create Firm, manager and sweepstakes
+            //Create Firm, manager and add sweepstakes
             CreateMarketingFirmWithManager();
             sweepstakes = marketingFirm.CreateSweepstake();
+
+            //Pull sweepstake from stack or queue
+            sweepstakes = marketingFirm.GetSweepstake();
 
             //Create contestants, register them and print info
             contestant1 = new Contestant();
@@ -32,8 +37,12 @@ namespace Sweepstakes
             sweepstakes.PrintContestantInfo(contestant3);
 
             //Pick random winner
-            sweepstakes.PickWinner();
             
+            winningContestant = sweepstakes.PickWinner();
+            Console.WriteLine($"The winner of {sweepstakes.Name} is Registarion number {winningContestant.RegistrationNumber}. {winningContestant.FirstName} {winningContestant.LastName}!!!");
+            Console.WriteLine("Thanks to everyone who entered!");
+
+
 
         }
 
